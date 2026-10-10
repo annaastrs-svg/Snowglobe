@@ -1,9 +1,7 @@
 
 const CANCIONES = [
   { titulo: "Sincerely Yours",  artista: "Thee Sinseers & Joey Quiñones", youtube: "https://youtu.be/ywiTM8FVJMY?si=iHnNmvnnbnhi5WwJ" },
-  { titulo: "Once You Know",    artista: "Thee Sacred Souls",             youtube: "https://youtu.be/96StFO8_GZo?si=CoYK9znxfonGyC0F" },
-  { titulo: "It Had to Be You", artista: "Frank Sinatra",                 youtube: "https://youtu.be/BXmEJL1mnuU?si=4oRQTte_rowDXJjY" },
-  { titulo: "Si Llorarás", artista: "The Sinseers",                 youtube: "https://youtu.be/mFJvZ_IUmQo?si=b5b3D-JZTcrkZ4iw" },
+  { titulo: "Once You Know",    artista: "Thee Sacred Souls",             youtube: "https://youtu.be/siO6dkqidc4?si=Mi4sRYWVedkAzP7H" },
 ];
 const MUSICA_AL_ENTRAR = true;
 const TEXTO_ALIEN = "Tu novia esta medio loca creo que lo sabes . . . . te manda una carta dice que aun que estes tan lejos ella te ama y lo hara siempre";
@@ -318,6 +316,17 @@ mientras me quiebro por dentro
 Tal vez no 
 Pero sentir me lo quiero permitir
    ========================================================= */
+
+
+
+
+
+
+
+
+
+
+
 const musica = $("#musica");
 const lista = $("#lista");
 const aviso = $("#aviso");
@@ -373,7 +382,7 @@ function playPausa() {
 }
 
 if (location.protocol === "file:") {
-  aviso.textContent = "Para que suene, ábrela con Go Live";
+  aviso.textContent = "ABRELE CON GO LIFE ";
 }
 const yt = document.createElement("script");
 yt.src = "https://www.youtube.com/iframe_api";
@@ -396,7 +405,7 @@ window.onYouTubeIframeAPIReady = () => {
       },
       onError: () => {
         ponerSonando(false);
-        aviso.textContent = `"${CANCIONES[actual].titulo}" no se deja poner aquí, prueba con otro link`;
+        aviso.textContent = `"${CANCIONES[actual].titulo}" SI SALE ESTO NO JALA SJJSJSH ES Q ES UNA MIERDAAAAAAAAAAAA `;
       },
     },
   });
