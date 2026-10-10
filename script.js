@@ -120,6 +120,29 @@ function dibujarCielo(ahora) {
 
 ajustarCanvas();
 window.addEventListener("resize", ajustarCanvas);
+
+
+
+const LINK_DOCUMENTO = "https://docs.google.com/document/d/1GidMbNEuv3HdtlH188FkWZckCinqdJDOA-sqKZZtSgw/edit?usp=sharing"; 
+
+canvas.addEventListener("click", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mouseX = e.clientX - rect.left;
+  const mouseY = e.clientY - rect.top;
+  for (const s of estrellas) {
+    const dx = mouseX - s.x;
+    const dy = mouseY - s.y;
+    const distancia = Math.sqrt(dx * dx + dy * dy);
+    if (distancia <= Math.max(s.r * 5, 15)) {
+      window.open(LINK_DOCUMENTO, "_blank");
+      break;
+    }
+  }
+});
+
+
+
+
 requestAnimationFrame(dibujarCielo);
 setTimeout(lanzarFugaz, 3500);
 const escenaEspacio = $("#escena-espacio");
